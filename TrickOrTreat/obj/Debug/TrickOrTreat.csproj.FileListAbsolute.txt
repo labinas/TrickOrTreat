@@ -1,0 +1,12 @@
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\bin\Debug\TrickOrTreat.exe.config
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\bin\Debug\TrickOrTreat.exe
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\bin\Debug\TrickOrTreat.pdb
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.csprojAssemblyReference.cache
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.Form1.resources
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.Properties.Resources.resources
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.csproj.GenerateResource.cache
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.csproj.CoreCompileInputs.cache
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.exe
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.pdb
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.StartScreen.resources
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.HelpScreen.resources
