@@ -16,5 +16,17 @@ namespace TrickOrTreat
         {
             InitializeComponent();
         }
+
+        private void backButtonClicked(object sender, EventArgs e)
+        {
+            StartScreen startScreen = new StartScreen();
+            startScreen.Width = this.Width;
+            startScreen.Height = this.Height;
+            startScreen.StartPosition = FormStartPosition.Manual;
+            startScreen.Location = new Point(this.Location.X, this.Location.Y);
+            this.Visible = false;
+            startScreen.ShowDialog();
+            //this.Visible = true;
+        }
     }
 }

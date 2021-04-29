@@ -60,6 +60,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,13 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,10 +100,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\angry-chocolate.png" />
+    <None Include="Resources\background-music.wav" />
     <Content Include="Resources\Background.jpg" />
     <Content Include="Resources\BackgroundResized.png" />
+    <None Include="Resources\BackgroundResizedWithoutTop.png" />
     <Content Include="Resources\bat-enemy.png" />
     <Content Include="Resources\bottom-cloud.png" />
+    <None Include="Resources\button_back.png" />
     <Content Include="Resources\button_help.png" />
     <Content Include="Resources\button_help_rectangle.png" />
     <Content Include="Resources\button_play.png" />
@@ -112,13 +116,23 @@
     <Content Include="Resources\cloud2.png" />
     <Content Include="Resources\cute-salmon.png" />
     <Content Include="Resources\fish-skeleton.png" />
+    <None Include="Resources\help-screen-pink.png" />
+    <None Include="Resources\help-screen-pink-black.png" />
+    <None Include="Resources\help-screen-gradient.png" />
+    <None Include="Resources\help-screen-gradientpink.png" />
+    <None Include="Resources\game-over.wav" />
     <Content Include="Resources\help-screen.png" />
     <Content Include="Resources\Left.gif" />
     <Content Include="Resources\life.png" />
     <Content Include="Resources\lives-icon.png" />
     <Content Include="Resources\milk-bottle.png" />
+    <None Include="Resources\mixkit-sad-game-over-trombone-471.wav" />
+    <None Include="Resources\mixkit-hard-pop-click-2364.wav" />
+    <None Include="Resources\Purple Planet Music - Silver Sparkles %281_29%29 90bpm %28mp3cut.net%29.wav" />
+    <None Include="Resources\pop.wav" />
     <Content Include="Resources\rat.png" />
     <Content Include="Resources\Right.gif" />
+    <None Include="Resources\top-cloud-resized.png" />
     <Content Include="Resources\top-cloud.png" />
     <Content Include="Resources\trick-or-treat.png" />
   </ItemGroup>
