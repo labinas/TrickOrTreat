@@ -300,6 +300,26 @@ namespace TrickOrTreat.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap moving_background {
+            get {
+                object obj = ResourceManager.GetObject("moving_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pink_diagonal_stripes {
+            get {
+                object obj = ResourceManager.GetObject("pink_diagonal_stripes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream pop {
@@ -354,6 +374,16 @@ namespace TrickOrTreat.Properties {
         internal static System.Drawing.Bitmap trick_or_treat {
             get {
                 object obj = ResourceManager.GetObject("trick_or_treat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap violet_diagonal_stripes {
+            get {
+                object obj = ResourceManager.GetObject("violet_diagonal_stripes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

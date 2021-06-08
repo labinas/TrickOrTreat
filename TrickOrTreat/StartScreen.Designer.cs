@@ -39,9 +39,9 @@ namespace TrickOrTreat
             // 
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Image = global::TrickOrTreat.Properties.Resources.trick_or_treat;
-            this.title.Location = new System.Drawing.Point(71, 244);
+            this.title.Location = new System.Drawing.Point(12, 240);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(420, 98);
+            this.title.Size = new System.Drawing.Size(528, 113);
             this.title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.title.TabIndex = 0;
             this.title.TabStop = false;
@@ -83,7 +83,7 @@ namespace TrickOrTreat
             // StartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.BackgroundResized;
+            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.moving_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 753);
             this.Controls.Add(this.helpButton);

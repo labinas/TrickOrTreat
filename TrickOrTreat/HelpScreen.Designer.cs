@@ -29,7 +29,6 @@ namespace TrickOrTreat
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpScreen));
             this.helpText = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.helpText)).BeginInit();
@@ -39,9 +38,10 @@ namespace TrickOrTreat
             // 
             this.helpText.BackColor = System.Drawing.Color.Transparent;
             this.helpText.Image = global::TrickOrTreat.Properties.Resources.help_screen_pink;
-            this.helpText.Location = new System.Drawing.Point(-5, 151);
+            this.helpText.InitialImage = global::TrickOrTreat.Properties.Resources.help_screen;
+            this.helpText.Location = new System.Drawing.Point(30, 179);
             this.helpText.Name = "helpText";
-            this.helpText.Size = new System.Drawing.Size(563, 433);
+            this.helpText.Size = new System.Drawing.Size(499, 405);
             this.helpText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.helpText.TabIndex = 7;
             this.helpText.TabStop = false;
@@ -68,7 +68,7 @@ namespace TrickOrTreat
             // HelpScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.pink_diagonal_stripes;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 753);
             this.Controls.Add(this.backButton);
