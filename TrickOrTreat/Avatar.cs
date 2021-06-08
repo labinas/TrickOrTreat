@@ -11,27 +11,24 @@ namespace TrickOrTreat
     public class Avatar
     {
         private static Avatar instance = null;
-        public PictureBox kittyAvatar { get; set; }
+        Image kittyAvatar;
+        Rectangle dimensions;
         private int formWidth;
         private int formHeight;
         public bool goLeft { get; set; }
         public bool goRight { get; set; }
-        public Point center { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         private Avatar(int width, int height)
         {
             formWidth = width;
             formHeight = height;
-            kittyAvatar = new PictureBox();
-            kittyAvatar.Image = Properties.Resources.Left;
-            kittyAvatar.Size = new Size(85, 85);
-            kittyAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
-            kittyAvatar.Location = new Point(230, 635);
-            //kittyAvatar.Location = new Point(formWidth / 2 - kittyAvatar.Left / 2, formHeight - kittyAvatar.Top);
-            kittyAvatar.BackColor = Color.Transparent;
+            kittyAvatar = Properties.Resources.Left;
+            dimensions = new Rectangle(formWidth / 2 - 85 / 2, formHeight - 85, 85, 85);
             goLeft = false;
             goRight = false;
-            center = calculateCenter();
+            calculateCenter();
         }
 
         public static Avatar getInstance(int width, int height)
@@ -42,30 +39,44 @@ namespace TrickOrTreat
             return instance;
         }
 
+        public void draw(Graphics g)
+        {
+            g.DrawImage(kittyAvatar, dimensions);
+        }
+
         public void move()
         {
-            if (goLeft && kittyAvatar.Left > 0)
+            if (goLeft && dimensions.X > 0)
             {
-                kittyAvatar.Image = Properties.Resources.Left;
-                kittyAvatar.Left -= 10;
-                center = calculateCenter();
+                kittyAvatar = Properties.Resources.Left;
+                dimensions.X -= 10;
             }
-            else if (goRight && kittyAvatar.Left < formWidth - kittyAvatar.Width)
+            else if (goRight && dimensions.X < formWidth - dimensions.Width)
             {
-                kittyAvatar.Image = Properties.Resources.Right;
-                kittyAvatar.Left += 10;
-                center = calculateCenter();
+                kittyAvatar = Properties.Resources.Right;
+                dimensions.X += 10;       
             }
+
+            calculateCenter();
         }
 
         public bool checkIntersection(FallingObject obj)
         {
-            return 45 * 45 > Math.Pow(center.X - obj.center.X, 2) + Math.Pow(center.Y - obj.center.Y, 2);
+            return 45 * 45 > Math.Pow(X - obj.X, 2) + Math.Pow(Y - obj.Y, 2);
         }
 
-        private Point calculateCenter()
+        private void calculateCenter()
         {
-            return new Point(kittyAvatar.Left + kittyAvatar.Width / 2, kittyAvatar.Top + kittyAvatar.Height / 2);
+            X = dimensions.X + dimensions.Width / 2;
+            Y = dimensions.Y + dimensions.Height / 2;
+        }
+
+        public void reset()
+        {
+            dimensions = new Rectangle(formWidth / 2 - 85 / 2, formHeight - 85, 85, 85);
+            goLeft = false;
+            goRight = false;
+            calculateCenter();
         }
     }
 }

@@ -35,25 +35,25 @@ namespace TrickOrTreat
             {
                 case TYPE.MILK:
                     return new FallingObject(Properties.Resources.milk_bottle,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250,-10), 20, 45), 1, 0);
+                        new Rectangle(random.Next(1, formWidth-20), random.Next(-250,-10), 20, 45), 1, 0);
                 case TYPE.BOWL:
                     return new FallingObject(Properties.Resources.cat_bowl,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250, -10), 45, 35), 2, 0);
+                        new Rectangle(random.Next(1, formWidth-45), random.Next(-250, -10), 45, 35), 2, 0);
                 case TYPE.SALMON:
                     return new FallingObject(Properties.Resources.cute_salmon,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250, -10), 40, 30), 3, 0);
+                        new Rectangle(random.Next(1, formWidth-40), random.Next(-250, -10), 40, 30), 3, 0);
                 case TYPE.RAT:
                     return new FallingObject(Properties.Resources.rat,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250, -10), 40, 30), -1, 0);
+                        new Rectangle(random.Next(1, formWidth-40), random.Next(-250, -10), 40, 30), -1, 0);
                 case TYPE.CHOCOLATE:
                     return new FallingObject(Properties.Resources.angry_chocolate,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250, -10), 30, 45), -3, 0);
+                        new Rectangle(random.Next(1, formWidth-30), random.Next(-250, -10), 30, 45), -3, 0);
                 case TYPE.SKELETON:
                     return new FallingObject(Properties.Resources.fish_skeleton,
-                        new Rectangle(random.Next(1, formWidth), random.Next(-250, -10), 50, 25), -5, -1);
+                        new Rectangle(random.Next(1, formWidth-50), random.Next(-250, -10), 50, 25), -5, -1);
+                default: return null;
             }
 
-            return null;
         }
 
         public FallingObject createExtraLife(int formWidth)

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace TrickOrTreat
 {
+
     public class Game
     {
+        public event EventHandler GameOverEvent;
+
         private ObjectFactory factory;
         Avatar avatar;
         Enemy enemy;
@@ -42,6 +45,7 @@ namespace TrickOrTreat
 
         public void draw(Graphics g)
         {
+            avatar.draw(g);
             enemy.draw(g);
             foreach(FallingObject obj in fallingObjects)
             {
@@ -78,8 +82,10 @@ namespace TrickOrTreat
 
             if (enemy.checkIfCaught(avatar) || totalLives == 0)
             {
-                gameOver = true;
                 sound.playGameOverSound();
+                if (GameOverEvent != null)
+                    GameOverEvent.Invoke(this, EventArgs.Empty);
+                
             }
 
             else
@@ -94,7 +100,7 @@ namespace TrickOrTreat
                         fallingObjects.RemoveAt(i);
                     }
 
-                    if (fallingObjects[i].outOfBounds)
+                    else if (fallingObjects[i].outOfBounds)
                         fallingObjects.RemoveAt(i);
                 }
             }
@@ -129,6 +135,7 @@ namespace TrickOrTreat
 
         public void changeBatDirection()
         {
+
             if (enemy.goLeft)
             {
                 enemy.goLeft = false;
@@ -144,6 +151,12 @@ namespace TrickOrTreat
         public Avatar getAvatar()
         {
             return avatar;
+        }
+
+        public void reset()
+        {
+            avatar.reset();
+            enemy.reset();
         }
     }
 }

@@ -14,7 +14,8 @@ namespace TrickOrTreat
         public int points { get; set; }
         public int lives { get; set; }
         public bool outOfBounds { get; set; }
-        public Point center { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         public FallingObject(Image image, Rectangle dimensions, int points, int lives)
         {
@@ -23,7 +24,7 @@ namespace TrickOrTreat
             this.points = points;
             this.lives = lives;
             outOfBounds = false;
-            center = calculateCenter();
+            calculateCenter();
         }
 
         public void draw(Graphics g)
@@ -33,19 +34,20 @@ namespace TrickOrTreat
 
         public void move(int speed, int height)
         {
-            if (dimensions.Y <= 0)
+            if (dimensions.Y >= height)
                 outOfBounds = true;
             else
             {
                 dimensions.Y = (lives != 1) ? dimensions.Y + speed : dimensions.Y + 7 + speed;
-                center = calculateCenter();
+                calculateCenter();
             }
                 
         }
 
-        private Point calculateCenter()
+        private void calculateCenter()
         {
-            return new Point(dimensions.X + dimensions.Width / 2, dimensions.Y + dimensions.Height / 2);
+            X = dimensions.X + dimensions.Width / 2;
+            Y = dimensions.Y + dimensions.Height / 2;
         }
 
     }

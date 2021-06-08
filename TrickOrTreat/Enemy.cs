@@ -16,16 +16,18 @@ namespace TrickOrTreat
         public bool goLeft { get; set; }
         public bool goRight { get; set; }
         public bool appear { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
         private Random random;
 
         private Enemy()
         {
             random = new Random();
             image = Properties.Resources.bat_enemy;
-            dimensions = new Rectangle(-30, -30, 80, 50);
-            center = calculateCenter();
+            dimensions = new Rectangle(random.Next(0,490), -30, 80, 50);
+            calculateCenter();
             goLeft = false;
-            goRight = false;
+            goRight = true;
             appear = false; 
         }
 
@@ -63,17 +65,25 @@ namespace TrickOrTreat
             if (goRight && dimensions.X + dimensions.Width < formWidth)
                 dimensions.X += speed + 3;
 
-            center = calculateCenter();
+            calculateCenter();
         }
 
         public bool checkIfCaught(Avatar kitty)
         {
-            return 45 * 45 > Math.Pow(center.X - kitty.center.X, 2) + Math.Pow(center.Y - kitty.center.Y, 2);
+            return 45 * 45 > Math.Pow(X - kitty.X, 2) + Math.Pow(Y - kitty.Y, 2);
         }
 
-        private Point calculateCenter()
+        private void calculateCenter()
         {
-            return new Point(dimensions.X + dimensions.Width / 2, dimensions.Y + dimensions.Height / 2);
+            X = dimensions.X + dimensions.Width / 2;
+            Y = dimensions.Y + dimensions.Height / 2;
+        }
+
+        public void reset()
+        {
+            dimensions = new Rectangle(random.Next(0, 490), -30, 80, 50);
+            appear = false;
+            calculateCenter();
         }
     }
 }

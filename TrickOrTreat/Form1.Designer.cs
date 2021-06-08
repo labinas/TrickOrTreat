@@ -33,14 +33,12 @@ namespace TrickOrTreat
             this.totalScore = new System.Windows.Forms.Label();
             this.remainingLives = new System.Windows.Forms.Label();
             this.lifeIcon = new System.Windows.Forms.PictureBox();
-            this.cloud2 = new System.Windows.Forms.PictureBox();
             this.batTimer = new System.Windows.Forms.Timer(this.components);
             this.moveTimer = new System.Windows.Forms.Timer(this.components);
             this.lifeTimer = new System.Windows.Forms.Timer(this.components);
             this.generatorTimer = new System.Windows.Forms.Timer(this.components);
             this.batDirection = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lifeIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cloud2)).BeginInit();
             this.SuspendLayout();
             // 
             // totalScore
@@ -78,17 +76,6 @@ namespace TrickOrTreat
             this.lifeIcon.TabStop = false;
             this.lifeIcon.Tag = "x";
             // 
-            // cloud2
-            // 
-            this.cloud2.BackColor = System.Drawing.Color.Transparent;
-            this.cloud2.BackgroundImage = global::TrickOrTreat.Properties.Resources.cloud2;
-            this.cloud2.Location = new System.Drawing.Point(0, -9);
-            this.cloud2.Name = "cloud2";
-            this.cloud2.Size = new System.Drawing.Size(331, 146);
-            this.cloud2.TabIndex = 8;
-            this.cloud2.TabStop = false;
-            this.cloud2.Tag = "x";
-            // 
             // batTimer
             // 
             this.batTimer.Interval = 12000;
@@ -123,7 +110,6 @@ namespace TrickOrTreat
             this.Controls.Add(this.totalScore);
             this.Controls.Add(this.lifeIcon);
             this.Controls.Add(this.remainingLives);
-            this.Controls.Add(this.cloud2);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(570, 800);
@@ -134,7 +120,6 @@ namespace TrickOrTreat
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyClick);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyRelease);
             ((System.ComponentModel.ISupportInitialize)(this.lifeIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cloud2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +129,6 @@ namespace TrickOrTreat
         private System.Windows.Forms.Label totalScore;
         private System.Windows.Forms.Label remainingLives;
         private System.Windows.Forms.PictureBox lifeIcon;
-        private System.Windows.Forms.PictureBox cloud2;
         private System.Windows.Forms.Timer batTimer;
         private System.Windows.Forms.Timer moveTimer;
         private System.Windows.Forms.Timer lifeTimer;
