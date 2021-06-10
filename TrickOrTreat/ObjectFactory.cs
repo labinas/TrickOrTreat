@@ -9,7 +9,7 @@ namespace TrickOrTreat
 {
     public class ObjectFactory : Factory
     {
-        enum TYPE { MILK, BOWL, SALMON, RAT, CHOCOLATE, SKELETON };
+        enum TYPE { MILK, BOWL, SALMON, RAT, CHOCOLATE, SKELETON, LIFE, KITTY, BAT };
 
         private static ObjectFactory instance = null;
         private static Random random;
@@ -27,7 +27,7 @@ namespace TrickOrTreat
             return instance;
         }
 
-        public FallingObject createFallingObject(int type, int formWidth)
+        public GameObject createObject(int type, int formWidth, int formHeight)
         {
             TYPE fallingObject = (TYPE)type;
 
@@ -51,15 +51,34 @@ namespace TrickOrTreat
                 case TYPE.SKELETON:
                     return new FallingObject(Properties.Resources.fish_skeleton,
                         new Rectangle(random.Next(1, formWidth-50), random.Next(-250, -10), 50, 25), -5, -1);
+                case TYPE.LIFE:
+                    return new FallingObject(Properties.Resources.life,
+                        new Rectangle(random.Next(1, formWidth), -30, 30, 30), 0, 1);
+                case TYPE.KITTY:
+                    return Avatar.getInstance(Properties.Resources.Left,
+                        new Rectangle(formWidth / 2 - 85 / 2, formHeight - 85, 85, 85));
+                case TYPE.BAT:
+                    return Enemy.getInstance(Properties.Resources.bat_enemy,
+                        new Rectangle(random.Next(1, formWidth - 80), -30, 80, 50));
+
                 default: return null;
             }
 
         }
 
-        public FallingObject createExtraLife(int formWidth)
+        public FallingObject createExtraLife(int formWidth, int formHeight)
         {
-            return new FallingObject(Properties.Resources.life,
-                        new Rectangle(random.Next(1, formWidth), -30, 30, 30), 0, 1);
+            return (FallingObject) createObject(6, formWidth, formHeight);
+        }
+
+        public Avatar createAvatar(int formWidth, int formHeight)
+        {
+            return (Avatar)createObject(7, formWidth, formHeight);
+        }
+
+        public Enemy createEnemy(int formWidth, int formHeight)
+        {
+            return (Enemy)createObject(8, formWidth, formHeight);
         }
     }
 }

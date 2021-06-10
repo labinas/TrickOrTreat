@@ -12,6 +12,9 @@ namespace TrickOrTreat
 {
     public partial class HelpScreen : Form
     {
+        bool currentlyAnimating = false;
+        bool isAnimating = true;
+
         public HelpScreen()
         {
             InitializeComponent();
@@ -27,6 +30,35 @@ namespace TrickOrTreat
             this.Visible = false;
             startScreen.ShowDialog();
             //this.Visible = true;
+        }
+
+        public void animationImage()
+        {
+            if (!currentlyAnimating)
+            {
+                ImageAnimator.Animate(this.BackgroundImage, new EventHandler(this.onFormChanged));
+                currentlyAnimating = true;
+            }
+        }
+
+        private void onFormChanged(object o, EventArgs e)
+        {
+            this.Invalidate();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            if (isAnimating)
+            {
+                animationImage();
+                ImageAnimator.UpdateFrames();
+            }
+            base.OnPaintBackground(e);
+        }
+
+        private void HelpScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

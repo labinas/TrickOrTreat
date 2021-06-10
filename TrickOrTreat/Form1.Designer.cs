@@ -115,7 +115,8 @@ namespace TrickOrTreat
             this.MaximumSize = new System.Drawing.Size(570, 800);
             this.MinimumSize = new System.Drawing.Size(570, 800);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Trick or Treat!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.paintOnForm);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyClick);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyRelease);

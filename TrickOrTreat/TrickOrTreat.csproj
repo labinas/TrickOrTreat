@@ -57,6 +57,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="GameObject.cs" />
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +70,7 @@
     <Compile Include="HelpScreen.Designer.cs">
       <DependentUpon>HelpScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="HighScores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HighScores.Designer.cs">
-      <DependentUpon>HighScores.cs</DependentUpon>
-    </Compile>
+    <Compile Include="HighScore.cs" />
     <Compile Include="ObjectFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +89,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelpScreen.resx">
       <DependentUpon>HelpScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HighScores.resx">
-      <DependentUpon>HighScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\angry-chocolate.png" />
+    <None Include="Resources\type_name_text.png" />
     <None Include="Resources\violet-diagonal-stripes.jpg" />
     <None Include="Resources\background-music.wav" />
     <Content Include="Resources\Background.jpg" />
@@ -130,10 +127,16 @@
     <Content Include="Resources\bat-enemy.png" />
     <Content Include="Resources\bottom-cloud.png" />
     <None Include="Resources\button_back.png" />
+    <None Include="Resources\button_exit-game.png" />
     <Content Include="Resources\button_help.png" />
     <Content Include="Resources\button_help_rectangle.png" />
+    <None Include="Resources\button_high-scores.png" />
+    <None Include="Resources\button_no.png" />
     <Content Include="Resources\button_play.png" />
     <Content Include="Resources\button_play_rectangle.png" />
+    <None Include="Resources\button_yes.png" />
+    <None Include="Resources\button_try-again.png" />
+    <None Include="Resources\button_save.png" />
     <Content Include="Resources\cat-bowl.png" />
     <Content Include="Resources\cloud1.png" />
     <Content Include="Resources\cloud2.png" />
@@ -144,7 +147,9 @@
     <None Include="Resources\help-screen-gradient.png" />
     <None Include="Resources\help-screen-gradientpink.png" />
     <None Include="Resources\game-over.wav" />
+    <None Include="Resources\game_over_text.png" />
     <Content Include="Resources\help-screen.png" />
+    <None Include="Resources\high_score_text.png" />
     <Content Include="Resources\Left.gif" />
     <Content Include="Resources\life.png" />
     <Content Include="Resources\lives-icon.png" />
@@ -159,6 +164,7 @@
     <Content Include="Resources\Right.gif" />
     <None Include="Resources\top-cloud-resized.png" />
     <Content Include="Resources\top-cloud.png" />
+    <None Include="Resources\total_score_text.png" />
     <Content Include="Resources\trick-or-treat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,4 +10,4 @@ C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\
 C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.pdb
 C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.StartScreen.resources
 C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.HelpScreen.resources
-C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.HighScores.resources
+C:\Users\Labina\Documents\Faks\4ti Semestar\Vizuelno Programiranje\TrickOrTreat\TrickOrTreat\obj\Debug\TrickOrTreat.GameOver.resources

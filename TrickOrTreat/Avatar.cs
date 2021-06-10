@@ -8,52 +8,36 @@ using System.Drawing;
 
 namespace TrickOrTreat
 {
-    public class Avatar
+    public class Avatar : GameObject
     {
         private static Avatar instance = null;
-        Image kittyAvatar;
-        Rectangle dimensions;
-        private int formWidth;
-        private int formHeight;
         public bool goLeft { get; set; }
         public bool goRight { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
 
-        private Avatar(int width, int height)
+        private Avatar(Image image, Rectangle dimensions) : base(image,dimensions)
         {
-            formWidth = width;
-            formHeight = height;
-            kittyAvatar = Properties.Resources.Left;
-            dimensions = new Rectangle(formWidth / 2 - 85 / 2, formHeight - 85, 85, 85);
             goLeft = false;
             goRight = false;
-            calculateCenter();
         }
 
-        public static Avatar getInstance(int width, int height)
+        public static Avatar getInstance(Image image, Rectangle dimensions)
         {
             if (instance == null)
-                instance = new Avatar(width, height);
+                instance = new Avatar(image,dimensions);
 
             return instance;
         }
 
-        public void draw(Graphics g)
-        {
-            g.DrawImage(kittyAvatar, dimensions);
-        }
-
-        public void move()
+        public override void move(int width, int height, int speed)
         {
             if (goLeft && dimensions.X > 0)
             {
-                kittyAvatar = Properties.Resources.Left;
+                image = Properties.Resources.Left;
                 dimensions.X -= 10;
             }
-            else if (goRight && dimensions.X < formWidth - dimensions.Width)
+            else if (goRight && dimensions.X < width - dimensions.Width)
             {
-                kittyAvatar = Properties.Resources.Right;
+                image = Properties.Resources.Right;
                 dimensions.X += 10;       
             }
 
@@ -65,18 +49,10 @@ namespace TrickOrTreat
             return 45 * 45 > Math.Pow(X - obj.X, 2) + Math.Pow(Y - obj.Y, 2);
         }
 
-        private void calculateCenter()
+        public void resetInstance()
         {
-            X = dimensions.X + dimensions.Width / 2;
-            Y = dimensions.Y + dimensions.Height / 2;
+            instance = null;
         }
 
-        public void reset()
-        {
-            dimensions = new Rectangle(formWidth / 2 - 85 / 2, formHeight - 85, 85, 85);
-            goLeft = false;
-            goRight = false;
-            calculateCenter();
-        }
     }
 }

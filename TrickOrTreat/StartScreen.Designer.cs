@@ -39,7 +39,7 @@ namespace TrickOrTreat
             // 
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Image = global::TrickOrTreat.Properties.Resources.trick_or_treat;
-            this.title.Location = new System.Drawing.Point(12, 240);
+            this.title.Location = new System.Drawing.Point(12, 191);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(528, 113);
             this.title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +56,7 @@ namespace TrickOrTreat
             this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playButton.Location = new System.Drawing.Point(195, 348);
+            this.playButton.Location = new System.Drawing.Point(195, 359);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(162, 79);
             this.playButton.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace TrickOrTreat
             this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.Location = new System.Drawing.Point(195, 433);
+            this.helpButton.Location = new System.Drawing.Point(195, 444);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(162, 79);
             this.helpButton.TabIndex = 2;
@@ -92,10 +92,9 @@ namespace TrickOrTreat
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(570, 800);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(570, 800);
             this.Name = "StartScreen";
-            this.Text = "StartScreen";
+            this.Text = "Trick or Treat!";
             ((System.ComponentModel.ISupportInitialize)(this.title)).EndInit();
             this.ResumeLayout(false);
 

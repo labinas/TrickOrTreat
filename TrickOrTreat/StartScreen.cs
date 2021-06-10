@@ -12,10 +12,40 @@ namespace TrickOrTreat
 {
     public partial class StartScreen : Form
     {
+        bool currentlyAnimating = false;
+        bool isAnimating = true;
+
         public StartScreen()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
+
+        public void animationImage()
+        {
+            if (!currentlyAnimating)
+            {
+                ImageAnimator.Animate(this.BackgroundImage, new EventHandler(this.onFormChanged));
+                currentlyAnimating = true;
+            }
+        }
+
+        private void onFormChanged(object o, EventArgs e)
+        {
+            this.Invalidate();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+
+            if (isAnimating)
+            {
+                animationImage();
+                ImageAnimator.UpdateFrames();
+            }
+            base.OnPaintBackground(e);
+        }
+
 
         private void playButtonClicked(object sender, EventArgs e)
         {
@@ -41,5 +71,7 @@ namespace TrickOrTreat
             helpScreen.ShowDialog();
             //this.Visible = true;
         }
+
+        
     }
 }

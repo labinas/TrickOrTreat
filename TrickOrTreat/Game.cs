@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TrickOrTreat
 {
 
     public class Game
     {
-        public event EventHandler GameOverEvent;
+        public event EventHandler EndEvent;
+        public static event EventHandler GameOverEvent;
+        public static event EventHandler CollectedObjectEvent;
+        public static Game instance = null;
 
         private ObjectFactory factory;
         Avatar avatar;
@@ -26,14 +31,14 @@ namespace TrickOrTreat
         Random random;
         public bool gameOver;
 
-        public Game(int width, int height)
+        private Game(int width, int height)
         {
             factory = ObjectFactory.getInstance();
             formWidth = width;
             formHeight = height;
             fallingObjects = new List<FallingObject>();
-            avatar = Avatar.getInstance(formWidth, formHeight);
-            enemy = Enemy.getInstance();
+            avatar = factory.createAvatar(formWidth,formHeight);
+            enemy = factory.createEnemy(formWidth,formHeight);
             sound = Sound.getInstance();
             totalScore = 0;
             totalLives = 3;
@@ -41,6 +46,14 @@ namespace TrickOrTreat
             factor = 10;
             gameOver = false;
             random = new Random();
+        }
+
+        public static Game getInstance(int width, int height)
+        {
+            if (instance == null)
+                instance = new Game(width, height);
+
+            return instance;
         }
 
         public void draw(Graphics g)
@@ -54,13 +67,13 @@ namespace TrickOrTreat
         }
 
         public void move()
-        {
-            avatar.move();
+        {            
+            avatar.move(formWidth, formHeight, speed);
             enemy.move(formWidth, formHeight, speed);
 
             foreach(FallingObject obj in fallingObjects)
             {
-                obj.move(speed, formHeight);
+                obj.move(formWidth, formHeight, speed);
             }
 
             update();
@@ -68,12 +81,12 @@ namespace TrickOrTreat
 
         public void generateObjects()
         {
-            fallingObjects.Add(factory.createFallingObject(random.Next(6), formWidth));
+            fallingObjects.Add((FallingObject) factory.createObject(random.Next(6), formWidth, formHeight));
         }
 
         public void generateExtraLife()
         {
-            fallingObjects.Add(factory.createExtraLife(formWidth));
+            fallingObjects.Add(factory.createExtraLife(formWidth, formHeight));
         }
 
         private void update()
@@ -82,10 +95,10 @@ namespace TrickOrTreat
 
             if (enemy.checkIfCaught(avatar) || totalLives == 0)
             {
-                sound.playGameOverSound();
                 if (GameOverEvent != null)
-                    GameOverEvent.Invoke(this, EventArgs.Empty);
-                
+                   GameOverEvent.Invoke(this, EventArgs.Empty);
+                if (EndEvent != null)
+                    EndEvent.Invoke(this, EventArgs.Empty);               
             }
 
             else
@@ -94,7 +107,9 @@ namespace TrickOrTreat
                 {
                     if (avatar.checkIntersection(fallingObjects[i]))
                     {
-                        sound.playCollectSound();
+                        if (CollectedObjectEvent != null)
+                            CollectedObjectEvent.Invoke(this, EventArgs.Empty);
+
                         totalScore += fallingObjects[i].points;
                         totalLives += fallingObjects[i].lives;
                         fallingObjects.RemoveAt(i);
@@ -110,10 +125,7 @@ namespace TrickOrTreat
         {
             if(totalScore >= factor)
             {   
-                if (factor <= 20)
-                    speed += 1;
-                else
-                    speed += 2;
+                speed += 2;
                 factor = factor * 2;
             }
         }
@@ -153,10 +165,16 @@ namespace TrickOrTreat
             return avatar;
         }
 
-        public void reset()
+        public void resetGame()
         {
-            avatar.reset();
-            enemy.reset();
+            avatar.resetInstance();
+            enemy.resetInstance();
+            instance = null;
+        }
+
+        public int getFallingObjectsCount()
+        {
+            return fallingObjects.Count;
         }
     }
 }

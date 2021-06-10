@@ -139,17 +139,35 @@
   <data name="button_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_exit_game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_exit-game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_help_rectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_help_rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_high_scores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_high-scores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_no" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_no.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_play_rectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_play_rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_try_again" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_try-again.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cat_bowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cat-bowl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +187,9 @@
   <data name="game_over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\game-over.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="game_over_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game_over_text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="help_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help-screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,6 +198,9 @@
   </data>
   <data name="help_screen_pink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help-screen-pink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="high_score_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\high_score_text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Left.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +235,14 @@
   <data name="top_cloud_resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\top-cloud-resized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="total_score_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total_score_text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="trick_or_treat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trick-or-treat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="type_name_text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\type_name_text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="violet_diagonal_stripes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\violet-diagonal-stripes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

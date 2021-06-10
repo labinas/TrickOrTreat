@@ -17,6 +17,18 @@ namespace TrickOrTreat
         {
             collect = new SoundPlayer(Properties.Resources.pop);
             gameOver = new SoundPlayer(Properties.Resources.game_over);
+            Game.GameOverEvent += Game_GameOverEvent;
+            Game.CollectedObjectEvent += Game_CollectedObjectEvent;
+        }
+
+        private void Game_CollectedObjectEvent(object sender, EventArgs e)
+        {
+            collect.Play();
+        }
+
+        private void Game_GameOverEvent(object sender, EventArgs e)
+        {
+            gameOver.Play();
         }
 
         public static Sound getInstance()
@@ -25,16 +37,6 @@ namespace TrickOrTreat
                 instance = new Sound();
 
             return instance;
-        }
-
-        public void playCollectSound()
-        {
-            collect.Play();
-        }
-
-        public void playGameOverSound()
-        {
-            gameOver.Play();
         }
     }
 }

@@ -36,12 +36,13 @@ namespace TrickOrTreat
             // 
             // helpText
             // 
-            this.helpText.BackColor = System.Drawing.Color.Transparent;
+            this.helpText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.helpText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.helpText.Image = global::TrickOrTreat.Properties.Resources.help_screen_pink;
             this.helpText.InitialImage = global::TrickOrTreat.Properties.Resources.help_screen;
-            this.helpText.Location = new System.Drawing.Point(30, 179);
+            this.helpText.Location = new System.Drawing.Point(12, 179);
             this.helpText.Name = "helpText";
-            this.helpText.Size = new System.Drawing.Size(499, 405);
+            this.helpText.Size = new System.Drawing.Size(528, 405);
             this.helpText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.helpText.TabIndex = 7;
             this.helpText.TabStop = false;
@@ -68,7 +69,7 @@ namespace TrickOrTreat
             // HelpScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.pink_diagonal_stripes;
+            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.moving_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 753);
             this.Controls.Add(this.backButton);
@@ -78,7 +79,8 @@ namespace TrickOrTreat
             this.MaximumSize = new System.Drawing.Size(570, 800);
             this.MinimumSize = new System.Drawing.Size(570, 800);
             this.Name = "HelpScreen";
-            this.Text = "HelpScreen";
+            this.Text = "Trick or Treat!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HelpScreen_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.helpText)).EndInit();
             this.ResumeLayout(false);
 

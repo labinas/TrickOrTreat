@@ -133,6 +133,16 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_exit_game {
+            get {
+                object obj = ResourceManager.GetObject("button_exit_game", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_help {
             get {
                 object obj = ResourceManager.GetObject("button_help", resourceCulture);
@@ -153,6 +163,26 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_high_scores {
+            get {
+                object obj = ResourceManager.GetObject("button_high_scores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_no {
+            get {
+                object obj = ResourceManager.GetObject("button_no", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_play {
             get {
                 object obj = ResourceManager.GetObject("button_play", resourceCulture);
@@ -166,6 +196,36 @@ namespace TrickOrTreat.Properties {
         internal static System.Drawing.Bitmap button_play_rectangle {
             get {
                 object obj = ResourceManager.GetObject("button_play_rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_save {
+            get {
+                object obj = ResourceManager.GetObject("button_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_try_again {
+            get {
+                object obj = ResourceManager.GetObject("button_try_again", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_yes {
+            get {
+                object obj = ResourceManager.GetObject("button_yes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,6 +292,16 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap game_over_text {
+            get {
+                object obj = ResourceManager.GetObject("game_over_text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help_screen {
             get {
                 object obj = ResourceManager.GetObject("help_screen", resourceCulture);
@@ -255,6 +325,16 @@ namespace TrickOrTreat.Properties {
         internal static System.Drawing.Bitmap help_screen_pink {
             get {
                 object obj = ResourceManager.GetObject("help_screen_pink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap high_score_text {
+            get {
+                object obj = ResourceManager.GetObject("high_score_text", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -371,9 +451,29 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap total_score_text {
+            get {
+                object obj = ResourceManager.GetObject("total_score_text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trick_or_treat {
             get {
                 object obj = ResourceManager.GetObject("trick_or_treat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap type_name_text {
+            get {
+                object obj = ResourceManager.GetObject("type_name_text", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
