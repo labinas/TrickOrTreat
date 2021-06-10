@@ -133,6 +133,16 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_clear_high_score {
+            get {
+                object obj = ResourceManager.GetObject("button_clear_high_score", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_exit_game {
             get {
                 object obj = ResourceManager.GetObject("button_exit_game", resourceCulture);
@@ -153,29 +163,9 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_help_rectangle {
-            get {
-                object obj = ResourceManager.GetObject("button_help_rectangle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap button_high_scores {
             get {
                 object obj = ResourceManager.GetObject("button_high_scores", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button_no {
-            get {
-                object obj = ResourceManager.GetObject("button_no", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,39 +183,9 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_play_rectangle {
-            get {
-                object obj = ResourceManager.GetObject("button_play_rectangle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button_save {
-            get {
-                object obj = ResourceManager.GetObject("button_save", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap button_try_again {
             get {
                 object obj = ResourceManager.GetObject("button_try_again", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button_yes {
-            get {
-                object obj = ResourceManager.GetObject("button_yes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -292,9 +252,9 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap game_over_text {
+        internal static System.Drawing.Bitmap game_over_txt {
             get {
-                object obj = ResourceManager.GetObject("game_over_text", resourceCulture);
+                object obj = ResourceManager.GetObject("game_over_txt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

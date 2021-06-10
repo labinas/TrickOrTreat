@@ -128,6 +128,7 @@
     <Content Include="Resources\bottom-cloud.png" />
     <None Include="Resources\button_back.png" />
     <None Include="Resources\button_exit-game.png" />
+    <None Include="Resources\button_clear-high-score.png" />
     <Content Include="Resources\button_help.png" />
     <Content Include="Resources\button_help_rectangle.png" />
     <None Include="Resources\button_high-scores.png" />
@@ -148,6 +149,7 @@
     <None Include="Resources\help-screen-gradientpink.png" />
     <None Include="Resources\game-over.wav" />
     <None Include="Resources\game_over_text.png" />
+    <None Include="Resources\game_over_txt.png" />
     <Content Include="Resources\help-screen.png" />
     <None Include="Resources\high_score_text.png" />
     <Content Include="Resources\Left.gif" />

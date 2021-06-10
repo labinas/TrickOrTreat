@@ -90,6 +90,7 @@ namespace TrickOrTreat
 
         private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
             Environment.Exit(0);
         }
 
@@ -115,6 +116,17 @@ namespace TrickOrTreat
         private void GameOver_Load(object sender, EventArgs e)
         {
             totalScoreText.Text = totalScore.ToString();
+            highScoreText.Text = highScore.highScore.ToString();
+        }
+
+        private void clearHighScore(object sender, EventArgs e)
+        {
+            highScore = new HighScore();
+            var serializer = new XmlSerializer(highScore.GetType());
+            using (var writer = new StreamWriter("highscores.xml", false))
+            {
+                serializer.Serialize(writer.BaseStream, highScore);
+            }
             highScoreText.Text = highScore.highScore.ToString();
         }
     }

@@ -37,6 +37,7 @@ namespace TrickOrTreat
             this.tryAgainButton = new System.Windows.Forms.Button();
             this.exitGameButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -46,7 +47,7 @@ namespace TrickOrTreat
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::TrickOrTreat.Properties.Resources.game_over_text;
+            this.pictureBox1.BackgroundImage = global::TrickOrTreat.Properties.Resources.game_over_txt;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(-54, 106);
             this.pictureBox1.Name = "pictureBox1";
@@ -116,7 +117,7 @@ namespace TrickOrTreat
             this.tryAgainButton.Location = new System.Drawing.Point(96, 586);
             this.tryAgainButton.Name = "tryAgainButton";
             this.tryAgainButton.Size = new System.Drawing.Size(161, 66);
-            this.tryAgainButton.TabIndex = 8;
+            this.tryAgainButton.TabIndex = 1;
             this.tryAgainButton.UseVisualStyleBackColor = false;
             this.tryAgainButton.Click += new System.EventHandler(this.tryAgainClicked);
             // 
@@ -129,10 +130,10 @@ namespace TrickOrTreat
             this.exitGameButton.FlatAppearance.BorderSize = 0;
             this.exitGameButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exitGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitGameButton.Location = new System.Drawing.Point(279, 586);
+            this.exitGameButton.Location = new System.Drawing.Point(303, 586);
             this.exitGameButton.Name = "exitGameButton";
             this.exitGameButton.Size = new System.Drawing.Size(161, 66);
-            this.exitGameButton.TabIndex = 9;
+            this.exitGameButton.TabIndex = 2;
             this.exitGameButton.UseVisualStyleBackColor = false;
             this.exitGameButton.Click += new System.EventHandler(this.exitGameClicked);
             // 
@@ -147,12 +148,29 @@ namespace TrickOrTreat
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearButton.BackgroundImage = global::TrickOrTreat.Properties.Resources.button_clear_high_score;
+            this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Location = new System.Drawing.Point(227, 363);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(100, 30);
+            this.clearButton.TabIndex = 3;
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearHighScore);
+            // 
             // GameOver
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::TrickOrTreat.Properties.Resources.moving_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 753);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.exitGameButton);
             this.Controls.Add(this.tryAgainButton);
@@ -186,5 +204,6 @@ namespace TrickOrTreat
         private System.Windows.Forms.Button tryAgainButton;
         private System.Windows.Forms.Button exitGameButton;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button clearButton;
     }
 }

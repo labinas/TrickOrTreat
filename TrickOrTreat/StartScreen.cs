@@ -72,6 +72,5 @@ namespace TrickOrTreat
             //this.Visible = true;
         }
 
-        
     }
 }
