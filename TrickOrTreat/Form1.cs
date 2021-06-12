@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
+using System.Threading;
 
 namespace TrickOrTreat
 {
@@ -81,7 +82,6 @@ namespace TrickOrTreat
                     game.adjustAvatarsLeft(true);
                 else if (e.KeyCode.Equals(Keys.Right) || e.KeyCode.Equals(Keys.D))
                     game.adjustAvatarsRight(true);
-            
 
             Invalidate();
         }
@@ -106,6 +106,7 @@ namespace TrickOrTreat
             this.ResumeLayout();
 
             Invalidate();
+            Thread.Sleep(1);
         }
 
         private void batTimerTick(object sender, EventArgs e)
@@ -132,15 +133,9 @@ namespace TrickOrTreat
         private void generatorTimerTick(object sender, EventArgs e)
         {
             this.SuspendLayout();
-            generatorTimer.Interval = random.Next(500, 3000);
-
-            int i = 0;
-            while(i < random.Next(4))
-            {
-                if(game.getFallingObjectsCount() <= 10)
+            generatorTimer.Interval = random.Next(500, 1000);
+            if(game.getFallingObjectsCount() <= 5)
                     game.generateObjects();
-                i++;
-            }
             this.ResumeLayout();
             Invalidate();
         }
@@ -159,12 +154,11 @@ namespace TrickOrTreat
         {
             game.changeBatDirection();
             batDirection.Interval = random.Next(600, 1800);
-
-            Invalidate();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
             Environment.Exit(0);
         }
     }

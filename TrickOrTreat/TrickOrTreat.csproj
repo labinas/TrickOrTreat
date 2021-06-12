@@ -124,6 +124,7 @@
     <Content Include="Resources\Background.jpg" />
     <Content Include="Resources\BackgroundResized.png" />
     <None Include="Resources\BackgroundResizedWithoutTop.png" />
+    <None Include="Resources\BackgroundResizedBMP.bmp" />
     <Content Include="Resources\bat-enemy.png" />
     <Content Include="Resources\bottom-cloud.png" />
     <None Include="Resources\button_back.png" />

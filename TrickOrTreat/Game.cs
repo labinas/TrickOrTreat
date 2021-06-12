@@ -42,7 +42,7 @@ namespace TrickOrTreat
             sound = Sound.getInstance();
             totalScore = 0;
             totalLives = 3;
-            speed = 6;
+            speed = 8;
             factor = 10;
             gameOver = false;
             random = new Random();
@@ -67,8 +67,8 @@ namespace TrickOrTreat
         }
 
         public void move()
-        {            
-            avatar.move(formWidth, formHeight, speed);
+        {       
+            avatar.move(formWidth, formHeight, speed);     
             enemy.move(formWidth, formHeight, speed);
 
             foreach(FallingObject obj in fallingObjects)

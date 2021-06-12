@@ -33,12 +33,12 @@ namespace TrickOrTreat
             if (goLeft && dimensions.X > 0)
             {
                 image = Properties.Resources.Left;
-                dimensions.X -= 10;
+                dimensions.X -= 15;
             }
             else if (goRight && dimensions.X < width - dimensions.Width)
             {
                 image = Properties.Resources.Right;
-                dimensions.X += 10;       
+                dimensions.X += 15;       
             }
 
             calculateCenter();

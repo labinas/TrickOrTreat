@@ -104,7 +104,7 @@ namespace TrickOrTreat
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.BackgroundResized;
+            this.BackgroundImage = global::TrickOrTreat.Properties.Resources.BackgroundResizedBMP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 753);
             this.Controls.Add(this.totalScore);

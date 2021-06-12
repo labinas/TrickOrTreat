@@ -93,6 +93,16 @@ namespace TrickOrTreat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackgroundResizedBMP {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundResizedBMP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgroundResizedWithoutTop {
             get {
                 object obj = ResourceManager.GetObject("BackgroundResizedWithoutTop", resourceCulture);
