@@ -276,3 +276,7 @@ private void saveHighScore()
         }
 ```
 ### Изгледот на играта
+![](screenshots/startscreen.PNG)
+![](screenshots/helpscreen.PNG)
+![](screenshots/gameplay.PNG)
+![](screenshots/gameoverscreen.PNG)
